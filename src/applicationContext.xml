@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+                 
+<bean id ="employeeBean" class="com.spring.map.Employee">
+<property name="emp_id" value="8400690" ></property>
+<property name="name" value="Aakash"></property>
+<constructor-arg>
+<map>
+<entry key-ref="pcBean" value-ref="printersBean"></entry>
+</map>
+</constructor-arg>
+</bean>
+
+<bean id="pcBean" class="com.spring.map.Computers">
+<constructor-arg value="1125" type="int"></constructor-arg>
+<constructor-arg value="Windows"></constructor-arg>
+</bean>
+
+<bean id="printersBean" class="com.spring.map.Printers">
+<constructor-arg value="6546" type="int"></constructor-arg>
+<constructor-arg value="InkJet"></constructor-arg>
+</bean>
+
+</beans>
